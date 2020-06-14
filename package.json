@@ -7,7 +7,7 @@
     "name": "edwardwang0302",
     "email": "edwardwang0302@me.com"
   },
-  "repository": "https://github.com/edwardwang0302/Mocdown.git",
+  "repository": "https://github.com/edwardwang0302/Mocdown",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -22,7 +22,7 @@
     "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\"",
     "pack": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ electron-builder --dir",
     "dist": "electron-builder",
-    "release": "cross-env GH_TOKEN=f45f4f4d38254371573919064f7baf0d4b30a864 electron-builder",
+    "release": "cross-env GH_TOKEN=f45f4f4d38254371573919064f7baf0d4b30a864 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ electron-builder",
     "prerelease": "npm run build && npm run buildMain",
     "prepack": "npm run build && npm run buildMain",
     "predist": "npm run build && npm run buildMain"
