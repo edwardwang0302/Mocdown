@@ -22,7 +22,7 @@
     "dev": "concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none npm start\"",
     "pack": "ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ electron-builder --dir",
     "dist": "electron-builder",
-    "release": "cross-env GH_TOKEN=f45f4f4d38254371573919064f7baf0d4b30a864 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ electron-builder",
+    "release": "cross-env GH_TOKEN=8b18196c1f702bb1fd462422e1b8e6319d754492 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ electron-builder",
     "prerelease": "npm run build && npm run buildMain",
     "prepack": "npm run build && npm run buildMain",
     "predist": "npm run build && npm run buildMain"
@@ -44,7 +44,9 @@
     "directories": {
       "buildResources": "assets"
     },
-    "publish": ["github"],
+    "publish": [
+      "github"
+    ],
     "extends": null,
     "mac": {
       "category": "public.app-category.productivity",
@@ -122,6 +124,7 @@
     "electron": "^9.0.3",
     "electron-builder": "^22.7.0",
     "wait-on": "^5.0.1",
-    "electron-is-dev": "^1.2.0"
+    "electron-is-dev": "^1.2.0",
+    "electron-updater": "^4.3.1"
   }
 }
